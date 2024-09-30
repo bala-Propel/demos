@@ -14,20 +14,8 @@ class ChatController extends Controller
         return view('chat');
     }
 
-    public function sendMessage(Request $request)
+    public function sendMessage()
     {
-        $request->validate([
-            'username' => 'required|string',
-            'message' => 'required|string',
-        ]);
-
-        $message = Message::create([
-            'username' => $request->username,
-            'message' => $request->message,
-        ]);
-
-        broadcast(new MessageSent($message))->toOthers();
-
-        return response()->json(['status' => 'Message sent!']);
+        return "yes";
     }
 }
