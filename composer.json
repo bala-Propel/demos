@@ -1,0 +1,11 @@
+{
+    "name": "prope/demos",
+    "description": "This is test purpose 2",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Prope\\Demos\\": "src/"
+        }
+    },
+    "require": {}
+}
